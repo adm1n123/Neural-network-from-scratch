@@ -1,0 +1,10 @@
+    max_epochs = 30
+    batch_size = 1
+
+    learning_rate = 0.001
+    num_layers = 1
+    num_units = 64
+    lamda = 0  # Regularization Parameter
+epochs completed 15 dev_error 10.179898344942162 nt.times_result(user=446.5625, system=2.640625, children_user=0.0, children_system=0.0, elapsed=0.0)
+
+SELECT * FROM task WHERE deadline >= now() AND owner IN (SELECT moderator FROM user_moderator_map WHERE user='admin123') AND task_id NOT IN (SELECT task_id FROM user_task_map WHERE submitted=1) ORDER BY deadline ASC
